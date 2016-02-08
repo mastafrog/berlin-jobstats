@@ -21,6 +21,9 @@
   "bugs": {
     "url": ""
   },
+  "engines": {
+    "node": "0.10.*"
+  },
   "license": "MIT",
   "dependencies": {
     "semantic-ui": "^2.1.8"
