@@ -1,28 +1,20 @@
 {
-"compilerOptions": {
-
-    "target": "es5",
-
-    "module": "system",
-
-    "moduleResolution": "node",
-
-    "sourceMap": true,
-
-    "emitDecoratorMetadata": true,
-
-    "experimentalDecorators": true,
-
-    "removeComments": false,
-
-    "noImplicitAny": false
-
-  },
-
-  "exclude": [
-
-    "node_modules"
-
-  ]
-
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "moduleResolution": "node",
+        "noImplicitAny": true,
+        "declaration": true,
+        "inlineSources": true,
+        "inlineSourceMap": true,
+        "removeComments": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true
+    },
+    "files": [
+        "semantic.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
 }

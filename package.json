@@ -1,25 +1,39 @@
 {
-  "name": "angular2-quickstart",
-  "version": "1.0.0",
+  "name": "berlin-jobstats",
+  "version": "0.10",
+  "description": "",
+  "main": "",
   "scripts": {
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "lite": "lite-server --baseDir ./ --port $PORT",
-    "start": "concurrent \"npm run tsc:w\" \"npm run lite\" "
+    "develop:build": "rm -rf demo/app && tsc -p './src' --rootDir './src' --outDir './demo' && tslint -c tslint.json 'src/app/**/*.ts' && cd src && find . -name '*.html' | cpio -pdm ../demo && npm run develop:copy",
+    "develop:server": "node server.js",
+    "develop:copy": "tsc && rm -rf demo/vendor/ng-semantic/* && cp -f semantic.js demo/vendor/ng-semantic && cp -f semantic.d.ts demo/vendor/ng-semantic && cp -rfp ng-semantic demo/vendor/ng-semantic"
   },
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mastafrog/berlin-jobstats"
+  },
+  "keywords": [
+    "angular2",
+    "semanticui",
+    "semantic-ui"
+  ],
+  "author": "",
+  "bugs": {
+    "url": ""
+  },
+  "license": "MIT",
   "dependencies": {
-    "angular2": "2.0.0-beta.2",
-    "systemjs": "0.19.6",
-    "es6-promise": "^3.0.2",
-    "es6-shim": "^0.33.3",
-    "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.0",
-    "zone.js": "0.5.10"
+    "semantic-ui": "^2.1.8"
   },
   "devDependencies": {
-    "concurrently": "^1.0.0",
-    "lite-server": "^1.3.4",
-    "typescript": "^1.7.5"
+    "angular2": "^2.0.0-beta.0",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.33.13",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.0",
+    "systemjs": "^0.19.17",
+    "tslint": "^3.2.1",
+    "typescript": "^1.7.5",
+    "zone.js": "^0.5.10"
   }
 }

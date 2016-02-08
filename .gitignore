@@ -1,2 +1,5 @@
-
 node_modules
+src/app/**/*.js
+ng-semantic/**/*.js
+npm-debug.log
+/semantic.js
